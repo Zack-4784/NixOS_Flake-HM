@@ -90,7 +90,7 @@
       "ctrl+minus" = "decrease_font_size";
       "ctrl+r"     = "load_config_file";
     };
-    themeFile = "Flat"; #ChallengerDeep
+    themeFile = "ChallengerDeep";
     extraConfig = ''
       # Extra raw kitty.conf content
 
