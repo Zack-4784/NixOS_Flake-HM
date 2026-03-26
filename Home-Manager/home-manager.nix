@@ -36,7 +36,7 @@
       alias ga='git add'
       alias gc='git commit -m'
       alias gaa='git add ./'
-      alias agr='cd ~/NixOS && git add ./ && git commit -m "AUTOMATED REBUILD" && sudo nixos-rebuild switch --flake .#DeepThought && cd ~/'
+      alias agr='cd ~/documents/NixOS && git add ./ && git commit -m "AUTOMATED REBUILD" && sudo nixos-rebuild switch --flake .#DeepThought && cd ~/'
       alias reb='sudo nixos-rebuild switch --flake ~/documents/NixOS#DeepThought'
       alias cu='nix-collect-garbage -d'
       alias cs='cat ~/documents/cheatsheet'
@@ -90,7 +90,7 @@
       "ctrl+minus" = "decrease_font_size";
       "ctrl+r"     = "load_config_file";
     };
-    themeFile = "ChallengerDeep";
+    themeFile = "Flat"; #ChallengerDeep
     extraConfig = ''
       # Extra raw kitty.conf content
 
