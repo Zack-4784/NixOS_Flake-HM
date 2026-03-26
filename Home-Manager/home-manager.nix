@@ -95,8 +95,8 @@
       # Extra raw kitty.conf content
 
       symbol_map U+E000-U+E00A,U+EA60-U+EBEB Symbols Nerd Font Mono
-      selection_foreground #000000
-      selection_background #ffffff
+      #selection_foreground #000000
+      #selection_background #ffffff
       hide_window_decorations = "yes";
     '';
   };
