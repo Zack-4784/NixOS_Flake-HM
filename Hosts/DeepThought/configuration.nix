@@ -119,7 +119,7 @@
     python311
     home-manager
     git
-    github
+    gitFull
     vlc
     gnumake
     rustup
