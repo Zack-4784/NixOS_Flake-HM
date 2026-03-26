@@ -29,8 +29,6 @@
               home-manager.users.zack = {
                 imports = [
                   ./Home-Manager/home-manager.nix
-                  #./modules/bash.nix
-                  #./modules/kitty.nix
                 ];
               };
             }
