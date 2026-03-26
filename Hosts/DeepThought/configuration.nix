@@ -128,6 +128,7 @@
     planify
     age
     netflix
+    bat
   ];
 
   system.stateVersion = "25.11";
