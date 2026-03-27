@@ -54,7 +54,7 @@
 
   programs.kitty = {
     enable = true;
-
+    enableGitIntergration = true;
     font = {
       name = "JetBrains Mono";
       size = 11;
