@@ -54,7 +54,6 @@
 
   programs.kitty = {
     enable = true;
-    enableGitIntergration = true;
     font = {
       name = "JetBrains Mono";
       size = 11;
@@ -66,7 +65,7 @@
       hide_window_decorations = "no";
       confirm_os_window_close = 0;
       # Cursor
-      cursor_shape            = "beam";
+      cursor_shape            = "block";
       cursor_blink_interval   = "0.5";
       # Scrollback
       scrollback_lines        = 10000;
