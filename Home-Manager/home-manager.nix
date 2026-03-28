@@ -42,6 +42,8 @@
       alias cs='cat ~/documents/cheatsheet'
       alias bc='cat ~/.bashrc'
       alias gin='cd ~/documents/NixOS'
+
+      bind -s 'set completion-ignore-case on'
     '';
     force = true;
   };
