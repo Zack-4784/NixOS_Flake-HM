@@ -16,7 +16,7 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      python = pkgs.python312
+      python = pkgs.python312;
     in {
       # NixOS system configuration
       nixosConfigurations = {
