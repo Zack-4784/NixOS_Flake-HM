@@ -4,7 +4,7 @@
   home = {
     username = "zack";
     homeDirectory = "/home/zack";
-    stateVersion = "unstable";
+    stateVersion = "25.11";
   };
 
   programs.git = {
