@@ -43,6 +43,7 @@
       alias bc='cat ~/.bashrc'
       alias gin='cd ~/documents/NixOS'
       alias mu='spotify_player'
+      alias gp='git push -u origin main'
     '';
     force = true;
   };
