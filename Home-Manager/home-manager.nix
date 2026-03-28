@@ -107,7 +107,7 @@
 # |___/ .__/ \___/ \__|_|_|  \__, |
 #     |_|                    |___/ 
 
-  services.spotify-player = {
+  programs.spotify-player = {
     enable = true;
     settings = {
       keymap = [
