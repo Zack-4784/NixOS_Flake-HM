@@ -165,4 +165,5 @@
       { command = "JumpToCurrentTrackInContext";     key_sequence = "g c"; }
       { command = "JumpToHighlightTrackInContext";   key_sequence = "g h"; }
     ];
+  };
 }
