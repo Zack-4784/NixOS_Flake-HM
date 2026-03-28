@@ -107,7 +107,7 @@
 # |___/ .__/ \___/ \__|_|_|  \__, |
 #     |_|                    |___/ 
 
-  programs.kitty{
+  programs.spotify-player{
     enable = true;
 
     [
@@ -328,14 +328,5 @@
         key_sequence = "g h";
       }
     ]
-
-
-
-
-
-
-
-
-
   }
 }
