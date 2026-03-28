@@ -130,7 +130,6 @@
     age
     netflix
     bat
-    vscodium
   ];
 
   system.stateVersion = "25.11";
