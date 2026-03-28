@@ -132,7 +132,7 @@
       {command = "ShowActionsOnCurrentContext"; key_sequence = "A";}
       {command = "AddSelectedItemToQueue"; key_sequence = "|";}
       {command = "FocusNextWindow"; key_sequence = "tab";} 
-      {command = "FocusPreviousWindow"; key_sequence = "backtab ";} 
+      {command = "FocusPreviousWindow"; key_sequence = "C-tab ";} 
       {command = "SwitchTheme"; key_sequence = "T";} 
       {command = "SwitchDevice"; key_sequence = "D";} 
       {command = "Search"; key_sequence = "/";} 
