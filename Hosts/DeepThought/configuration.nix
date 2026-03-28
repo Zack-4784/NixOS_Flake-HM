@@ -83,6 +83,8 @@
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  documentation.dev.enable = false;
+  documentation.doc.enable = false;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
