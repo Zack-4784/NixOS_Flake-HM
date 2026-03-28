@@ -119,7 +119,7 @@
     figlet
     fzf
     sqlitebrowser
-    python311
+    python312
     home-manager
     git
     gitFull
