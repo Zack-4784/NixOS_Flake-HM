@@ -42,6 +42,7 @@
       alias cs='cat ~/documents/cheatsheet'
       alias bc='cat ~/.bashrc'
       alias gin='cd ~/documents/NixOS'
+      alias mu='spotify_player'
     '';
     force = true;
   };
