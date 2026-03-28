@@ -116,7 +116,7 @@
       {command = "PlayRandom"; key_sequence = "~";}
       {command = "Repeat"; key_sequence = "C-r";}
       {command = "Shuffle"; key_sequence = "C-s";}
-      {command = "SeakStart"; key_sequence = "^";}
+      {command = "SeekStart"; key_sequence = "^";}
       {command = "Quit"; key_sequence = "C-c";}
       {command = "ClosePopup"; key_sequence = "q";}
       {command = "SelectNextOrScrollDown"; key_sequence = "down";}
