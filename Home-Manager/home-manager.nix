@@ -114,10 +114,10 @@
       { command = "PreviousTrack";                   key_sequence = "<"; }
       { command = "ResumePause";                     key_sequence = "space"; }
       { command = "PlayRandom";                      key_sequence = "~"; }
-      { command = "Repeat";                          key_sequence = "ctrl+r"; }
-      { command = "Shuffle";                         key_sequence = "ctrl+s"; }
+      { command = "Repeat";                          key_sequence = "C-r"; }
+      { command = "Shuffle";                         key_sequence = "C-s"; }
       { command = "SeakStart";                       key_sequence = "^"; }
-      { command = "Quit";                            key_sequence = "ctrl+c"; }
+      { command = "Quit";                            key_sequence = "C-c"; }
       { command = "ClosePopup";                      key_sequence = "q"; }
       { command = "SelectNextOrScrollDown";          key_sequence = "down"; }
       { command = "SelectPreviousOrScrollUp";        key_sequence = "up"; }
@@ -127,7 +127,7 @@
       { command = "SelectLastOrScrollToBottom";      key_sequence = "end"; }
       { command = "ChooseSelected";                  key_sequence = "enter"; }
       { command = "RefreshPlayback";                 key_sequence = "r"; }
-      { command = "ShowActionsOnSelectedItem";        key_sequence = "ctrl+space"; }
+      { command = "ShowActionsOnSelectedItem";        key_sequence = "C-space"; }
       { command = "ShowActionsOnCurrentTrack";        key_sequence = "a"; }
       { command = "ShowActionsOnCurrentContext";      key_sequence = "A"; }
       { command = "AddSelectedItemToQueue";           key_sequence = "|"; }
@@ -159,8 +159,8 @@
       { command = "SortLibraryAlphabetically";        key_sequence = "s q"; }
       { command = "SortLibraryByRecent";             key_sequence = "s r"; }
       { command = "ReverseOrder";                    key_sequence = "R"; }
-      { command = "MovePlaylistItemUp";              key_sequence = "ctrl+k"; }
-      { command = "MovePlaylistItemDown";            key_sequence = "ctrl+j"; }
+      { command = "MovePlaylistItemUp";              key_sequence = "C-k"; }
+      { command = "MovePlaylistItemDown";            key_sequence = "C-j"; }
       { command = "CreatePlaylist";                  key_sequence = "N"; }
       { command = "JumpToCurrentTrackInContext";     key_sequence = "g c"; }
       { command = "JumpToHighlightTrackInContext";   key_sequence = "g h"; }
