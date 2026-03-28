@@ -158,7 +158,7 @@
       { command = "SortTrackByDuration";             key_sequence = "s d"; }
       { command = "SortLibraryAlphabetically";        key_sequence = "s q"; }
       { command = "SortLibraryByRecent";             key_sequence = "s r"; }
-      { command = "ReverseOrder";                    key_sequence = "R"; }
+      { command = "ReverseTrackOrder";                    key_sequence = "R"; }
       { command = "MovePlaylistItemUp";              key_sequence = "C-k"; }
       { command = "MovePlaylistItemDown";            key_sequence = "C-j"; }
       { command = "CreatePlaylist";                  key_sequence = "N"; }
