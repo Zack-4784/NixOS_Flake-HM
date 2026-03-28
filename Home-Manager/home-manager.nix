@@ -327,7 +327,7 @@
           command = "JumpToHighlightTrackInContext";
           key_sequence = "g h";
         }
-      ]
+      ];
     };
-  }
+  };
 }
