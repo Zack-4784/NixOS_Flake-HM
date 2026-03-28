@@ -43,7 +43,7 @@
       alias bc='cat ~/.bashrc'
       alias gin='cd ~/documents/NixOS'
 
-      bind -s 'set completion-ignore-case on'
+      bind 'set completion-ignore-case on'
     '';
     force = true;
   };
