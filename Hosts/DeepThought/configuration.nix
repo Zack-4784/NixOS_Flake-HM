@@ -111,8 +111,9 @@
 
   environment.systemPackages = with pkgs; [
     firefox
-    spotify
+    spotify-player
     libreoffice-qt
+    vscodium
     vscode
     fastfetch
     figlet
