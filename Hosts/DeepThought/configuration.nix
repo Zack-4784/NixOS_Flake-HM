@@ -129,7 +129,6 @@
     unixtools.route
     planify
     age
-    netflix
     bat
   ];
 
