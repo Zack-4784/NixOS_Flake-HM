@@ -81,7 +81,6 @@
     #media-session.enable = true;
   };
 
-  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
   documentation.dev.enable = false;
   documentation.doc.enable = false;
@@ -114,7 +113,6 @@
     spotify-player
     libreoffice-qt
     vscodium
-    vscode
     fastfetch
     figlet
     fzf
