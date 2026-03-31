@@ -130,7 +130,6 @@
     planify
     age
     bat
-    openvpn
   ];
 
   system.stateVersion = "25.11";
