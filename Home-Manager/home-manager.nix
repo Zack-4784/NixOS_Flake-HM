@@ -12,6 +12,21 @@
     ./Program-Configurations/bash.nix
     ./Program-Configurations/kitty.nix
     ./Program-Configurations/spotify-player.nix
-    ./Program-Configurations/firefox.nix
+    #./Program-Configurations/firefox.nix
   ];
+
+  /*
+  home.file.".local/share/icons/firefox-custom.png".source =
+  ./Icons/f128189264.png;
+  xdg.desktopEntries.firefox = {
+    name = "Firefox";
+    genericName = "Web Browser";
+    exec = "firefox %u";
+    terminal = false;
+    type = "Application";
+    icon = "${config.home.homeDirectory}/.local/share/icons/firefox-custom.png";
+
+    categories = [ "Network" "WebBrowser" ];
+  };
+  */
 }
