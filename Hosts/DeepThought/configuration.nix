@@ -130,7 +130,7 @@
     planify
     age
     bat
-    protonvpn-gui
+    openvpn
   ];
 
   system.stateVersion = "25.11";
