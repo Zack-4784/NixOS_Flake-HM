@@ -130,7 +130,6 @@
     planify
     age
     bat
-    wireguard-ui
   ];
 
   system.stateVersion = "25.11";
