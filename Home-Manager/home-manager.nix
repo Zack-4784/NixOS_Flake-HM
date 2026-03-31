@@ -12,5 +12,6 @@
     ./Program-Configurations/bash.nix
     ./Program-Configurations/kitty.nix
     ./Program-Configurations/spotify-player.nix
+    ./Program-Configurations/firefox.nix
   ];
 }
