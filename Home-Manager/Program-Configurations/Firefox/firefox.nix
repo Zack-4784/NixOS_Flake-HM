@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  template = "${config.home.homeDirectory}/documents/NixOS/Home-Manager/Program-Configurations/Firefox/Firefox-Files-Template";
+  template = "${config.home.homeDirectory}./Firefox-Files-Template";
   profile  = "${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default";
 in
 {
