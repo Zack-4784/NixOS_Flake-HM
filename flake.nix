@@ -20,6 +20,7 @@
           ./Hosts/DeepThought/configuration.nix
           home-manager.nixosModules.home-manager{
             home-manager.useGloabalPkgs = true;
+            home-manager.useGloabalPackages = true;
             home-manager.extraSpecialArgs = {inherit python;};
             home-manager.users.zack = {
               imports = [
