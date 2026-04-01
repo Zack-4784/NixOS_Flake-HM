@@ -8,14 +8,10 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {nixpkgs, ...} @ inputs:{
-    let
-      system = "x86_64-linux";
-      lgpkgs = nixpkgs.legacyPackages.${system};
-      python = pkgs.python312;
-    in {
+  outputs = {nixpkgs, ...} @ inputs:
+    {
       nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs; inherit python};
+        specialArgs = {inherit inputs;};
         modules = [
           ./Hosts/DeepThought/configuration.nix
         ];
