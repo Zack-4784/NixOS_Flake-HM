@@ -1,37 +1,83 @@
-{ config, pkgs, lib, ... }:
-
-let
-  template = ./Firefox-Files-Template;
-  profile  = "${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default";
-in
 {
-  home.file."${profile}/prefs.js".source = "${template}/prefs.js";
-  home.file."${profile}/xulstore.json".source = "${template}/xulstore.json";
-  home.file."${profile}/handlers.json".source = "${template}/handlers.json";
-  home.file."${profile}/containers.json".source = "${template}/containers.json";
-  home.file."${profile}/permissions.sqlite".source = "${template}/permissions.sqlite";
-  home.file."${profile}/search.json.mozlz4".source = "${template}/search.json.mozlz4";
+  # -------------------------
+  # Core config files
+  # -------------------------
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/prefs.js".source =
+    ./Firefox-Files-Template/prefs.js;
 
-  home.file."${profile}/extensions" = {
-    source = "${template}/extensions";
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/xulstore.json".source =
+    ./Firefox-Files-Template/xulstore.json;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/handlers.json".source =
+    ./Firefox-Files-Template/handlers.json;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/containers.json".source =
+    ./Firefox-Files-Template/containers.json;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/permissions.sqlite".source =
+    ./Firefox-Files-Template/permissions.sqlite;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/search.json.mozlz4".source =
+    ./Firefox-Files-Template/search.json.mozlz4;
+
+
+  # -------------------------
+  # Extensions directory
+  # -------------------------
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extensions" = {
+    source = ./Firefox-Files-Template/extensions;
     recursive = true;
   };
 
-  home.file."${profile}/extension-settings.json".source = "${template}/extension-settings.json";
-  home.file."${profile}/extensions.json".source = "${template}/extensions.json";
-  home.file."${profile}/extension-preferences.json".source = "${template}/extension-preferences.json";
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extension-settings.json".source =
+    ./Firefox-Files-Template/extension-settings.json;
 
-  home.file."${profile}/places.sqlite".source = "${template}/places.sqlite";
-  home.file."${profile}/favicons.sqlite".source = "${template}/favicons.sqlite";
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extensions.json".source =
+    ./Firefox-Files-Template/extensions.json;
 
-  home.file."${profile}/logins.json".source = "${template}/logins.json";
-  home.file."${profile}/logins-backup.json".source = "${template}/logins-backup.json";
-  home.file."${profile}/key4.db".source = "${template}/key4.db";
-  home.file."${profile}/cert9.db".source = "${template}/cert9.db";
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extension-preferences.json".source =
+    ./Firefox-Files-Template/extension-preferences.json;
 
-  home.file."${profile}/cookies.sqlite".source = "${template}/cookies.sqlite";
-  home.file."${profile}/webappstore.sqlite".source = "${template}/webappstore.sqlite";
 
-  home.file."${profile}/ls-archive.sqlite".source = "${template}/ls-archive.sqlite";
-  home.file."${profile}/storage.sqlite".source = "${template}/storage.sqlite";
+  # -------------------------
+  # Bookmarks + history
+  # -------------------------
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/places.sqlite".source =
+    ./Firefox-Files-Template/places.sqlite;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/favicons.sqlite".source =
+    ./Firefox-Files-Template/favicons.sqlite;
+
+
+  # -------------------------
+  # Passwords
+  # -------------------------
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/logins.json".source =
+    ./Firefox-Files-Template/logins.json;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/logins-backup.json".source =
+    ./Firefox-Files-Template/logins-backup.json;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/key4.db".source =
+    ./Firefox-Files-Template/key4.db;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/cert9.db".source =
+    ./Firefox-Files-Template/cert9.db;
+
+
+  # -------------------------
+  # Cookies + site storage
+  # -------------------------
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/cookies.sqlite".source =
+    ./Firefox-Files-Template/cookies.sqlite;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/webappstore.sqlite".source =
+    ./Firefox-Files-Template/webappstore.sqlite;
+
+  # Safe persistent storage files only
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/ls-archive.sqlite".source =
+    ./Firefox-Files-Template/ls-archive.sqlite;
+
+  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/storage.sqlite".source =
+    ./Firefox-Files-Template/storage.sqlite;
 }
