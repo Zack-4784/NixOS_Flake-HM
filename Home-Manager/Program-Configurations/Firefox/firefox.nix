@@ -2,82 +2,81 @@
   # -------------------------
   # Core config files
   # -------------------------
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/prefs.js".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/prefs.js".source =
     ./Firefox-Files-Template/prefs.js;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/xulstore.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/xulstore.json".source =
     ./Firefox-Files-Template/xulstore.json;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/handlers.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/handlers.json".source =
     ./Firefox-Files-Template/handlers.json;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/containers.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/containers.json".source =
     ./Firefox-Files-Template/containers.json;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/permissions.sqlite".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/permissions.sqlite".source =
     ./Firefox-Files-Template/permissions.sqlite;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/search.json.mozlz4".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/search.json.mozlz4".source =
     ./Firefox-Files-Template/search.json.mozlz4;
 
 
   # -------------------------
   # Extensions directory
   # -------------------------
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extensions" = {
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/extensions" = {
     source = ./Firefox-Files-Template/extensions;
     recursive = true;
   };
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extension-settings.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/extension-settings.json".source =
     ./Firefox-Files-Template/extension-settings.json;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extensions.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/extensions.json".source =
     ./Firefox-Files-Template/extensions.json;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/extension-preferences.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/extension-preferences.json".source =
     ./Firefox-Files-Template/extension-preferences.json;
 
 
   # -------------------------
   # Bookmarks + history
   # -------------------------
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/places.sqlite".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/places.sqlite".source =
     ./Firefox-Files-Template/places.sqlite;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/favicons.sqlite".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/favicons.sqlite".source =
     ./Firefox-Files-Template/favicons.sqlite;
 
 
   # -------------------------
   # Passwords
   # -------------------------
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/logins.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/logins.json".source =
     ./Firefox-Files-Template/logins.json;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/logins-backup.json".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/logins-backup.json".source =
     ./Firefox-Files-Template/logins-backup.json;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/key4.db".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/key4.db".source =
     ./Firefox-Files-Template/key4.db;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/cert9.db".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/cert9.db".source =
     ./Firefox-Files-Template/cert9.db;
 
 
   # -------------------------
   # Cookies + site storage
   # -------------------------
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/cookies.sqlite".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/cookies.sqlite".source =
     ./Firefox-Files-Template/cookies.sqlite;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/webappstore.sqlite".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/webappstore.sqlite".source =
     ./Firefox-Files-Template/webappstore.sqlite;
 
-  # Safe persistent storage files only
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/ls-archive.sqlite".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/ls-archive.sqlite".source =
     ./Firefox-Files-Template/ls-archive.sqlite;
 
-  home.file."${config.home.homeDirectory}/.mozilla/firefox/s0u782un.default/storage.sqlite".source =
+  home.file."$HOME/.mozilla/firefox/s0u782un.default/storage.sqlite".source =
     ./Firefox-Files-Template/storage.sqlite;
 }
