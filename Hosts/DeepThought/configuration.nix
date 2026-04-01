@@ -28,6 +28,7 @@
     planify
     age
     bat
+    helix
   ];
 
   system.stateVersion = "25.11";
