@@ -1,6 +1,4 @@
-{ config, pkgs, lib, ... }:
-
-{
+{pkgs, lib, inputs, ...}: {
   programs.spotify-player = {
     enable = true;
 

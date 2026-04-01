@@ -1,6 +1,4 @@
-{ config, pkgs, lib, ... }:
-
-{
+{pkgs, lib, inputs, ...}: {
   programs.bash = {
     enable = true;
 
