@@ -1,3 +1,4 @@
+{ config, pkgs, lib, ... }:
 {
   # setting shortnames for paths frequently used - the templates path and the real firefox path
   let
@@ -35,6 +36,6 @@
     home.file."${profile}/webappstore.sqlite".source = "${template}/webappstore.sqlite";
     home.file."${profile}/storage/ls-archive.sqlite".source = "${template}/ls-archive.sqlite";
     home.file."${profile}/storage.sqlite".source = "${template}/storage.sqlite";
-  }
+  };
 }
 
