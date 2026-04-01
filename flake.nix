@@ -9,9 +9,13 @@
   };
 
   outputs = {nixpkgs, ...} @ inputs:
-    {
+    let
+      system = "x86_64-linux";
+      lgpkgs = nixpkgs.legacyPackages.${system};
+      python = pkgs.python312;
+    in {
       nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs; inherit python};
         modules = [
           ./Hosts/DeepThought/configuration.nix
         ];
