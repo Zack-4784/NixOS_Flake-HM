@@ -15,7 +15,7 @@
       python = pkgs.python312;
     in {
       nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs; inherit python};
+        specialArgs = {inherit inputs; inherit python;};
         modules = [
           ./Hosts/DeepThought/configuration.nix
         ];
