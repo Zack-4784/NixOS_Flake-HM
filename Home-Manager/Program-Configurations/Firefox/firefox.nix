@@ -11,11 +11,9 @@
         "browser.search.isUS" = false;
         "browser.toolbars.bookmarks.visibility" = "always";
       };
-      extensions = [
-        "uBlock0@raymondhill.net"
-        "FirefoxColor@mozilla.com"
-        "{762f9885-5a13-4abd-9c77-433dcd38b8fd}"
-        "{1e2b8669-d606-4fce-8e07-c6790b89734a}"
+      extensions = with pkgs.firefox-addons; [
+        ublock-origin
+        firefox-color
       ];
       search = {
         default = "Google";
