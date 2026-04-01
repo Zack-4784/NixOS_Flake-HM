@@ -1,44 +1,25 @@
+#fkale.nix
 {
-  description = "My NixOS + Home Manager configuration";
+  description = "My flake";
+
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = { self, nixpkgs, home-manager, ... }:
+
+  outputs = {nixpkgs, ...} @ inputs:{
     let
       system = "x86_64-linux";
-
-      pkgs = nixpkgs.legacyPackages.${system};
-
+      lgpkgs = nixpkgs.legacyPackages.${system};
       python = pkgs.python312;
     in {
-      nixosConfigurations = {
-        DeepThought = nixpkgs.lib.nixosSystem {
-          inherit system;
-
-          specialArgs = {
-            inherit pkgs python;
-          };
-          modules = [
-            ./Hosts/DeepThought/configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit python;
-              };
-              home-manager.users.zack = {
-                imports = [
-                  ./Home-Manager/home-manager.nix
-                ];
-              };
-            }
-          ];
-        };
+      nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs; inherit python};
+        modules = [
+          ./Hosts/DeepThought/configuration.nix
+        ];
       };
     };
+  };
 }
