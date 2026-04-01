@@ -2,7 +2,6 @@
 {pkgs, lib, inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ./Home-Manager/home-manager.nix
     inputs.home-manager.nixosModules.default
   ];
 

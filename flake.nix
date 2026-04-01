@@ -17,7 +17,16 @@
       nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs; inherit python;};
         modules = [
-          ./configuration.nix
+          ./Hosts/DeepThought/configuration.nix
+          home-manager.nixosModules.home-manager{
+            home-manager.useGloabalPkgs = true;
+            home-manager.extraSpecialArgs = {inherit python;};
+            home-manager.users.zack = {
+              imports = [
+                ./Home-Manager/home-manager.nix
+              ];
+            };
+          }
         ];
       };
     };
