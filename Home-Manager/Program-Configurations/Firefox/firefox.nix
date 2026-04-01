@@ -71,8 +71,8 @@
   home.file."$HOME/.mozilla/firefox/s0u782un.default/cookies.sqlite".source =
     ./Firefox-Files-Template/cookies.sqlite;
 
-  home.file."$HOME/.mozilla/firefox/s0u782un.default/webappstore.sqlite".source =
-    ./Firefox-Files-Template/webappstore.sqlite;
+  #home.file."$HOME/.mozilla/firefox/s0u782un.default/webappstore.sqlite".source =
+    #./Firefox-Files-Template/webappstore.sqlite;
 
   home.file."$HOME/.mozilla/firefox/s0u782un.default/ls-archive.sqlite".source =
     ./Firefox-Files-Template/ls-archive.sqlite;
