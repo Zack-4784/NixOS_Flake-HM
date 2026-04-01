@@ -2,7 +2,8 @@
 {pkgs, lib, inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.home-manager
+    ./Home-Manager/home-manager.nix
+    inputs.home-manager.nixosModules.default
   ];
 
   environment.systemPackages = with pkgs; [

@@ -17,7 +17,7 @@
       nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs; inherit python;};
         modules = [
-          ./Hosts/DeepThought/configuration.nix
+          ./configuration.nix
         ];
       };
     };
