@@ -11,19 +11,6 @@
         "browser.search.isUS" = false;
         "browser.toolbars.bookmarks.visibility" = "always";
       };
-      policies = {
-        DisableTelemetry = true;
-        DisableFirefoxStudies = true;
-        DisablePocket = true;
-        PasswordManagerEnabled = false;
-        DontCheckDefaultBrowser = true;
-        OfferToSaveLogins = false;
-        FirefoxHome = {
-          Search = true;
-          TopSites = false;
-          Highlights = false;
-        };
-      };
       extensions = [
         "uBlock0@raymondhill.net"
         "FirefoxColor@mozilla.com"
