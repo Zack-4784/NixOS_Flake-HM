@@ -1,37 +1,33 @@
 { config, pkgs, lib, ... }:
 {
-  # setting shortnames for paths frequently used - the templates path and the real firefox path
-  template = "~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template";
-  profile  = ".mozilla/firefox/s0u782un.default";
-
   # Core config files
-  home.file."${profile}/prefs.js".source = "${template}/prefs.js";
-  home.file."${profile}/xulstore.json".source = "${template}/xulstore.json";
-  home.file."${profile}/handlers.json".source = "${template}/handlers.json";
-  home.file."${profile}/containers.json".source = "${template}/containers.json";
-  home.file."${profile}/permissions.sqlite".source = "${template}/permissions.sqlite";
-  home.file."${profile}/search.json.mozlz4".source = "${template}/search.json.mozlz4";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/prefs.js".source = "~/.mozilla/firefox/s0u782un.default/prefs.js";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/xulstore.json".source = "~/.mozilla/firefox/s0u782un.default/xulstore.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/handlers.json".source = "~/.mozilla/firefox/s0u782un.default/handlers.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/containers.json".source = "~/.mozilla/firefox/s0u782un.default/containers.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/permissions.sqlite".source = "~/.mozilla/firefox/s0u782un.default/permissions.sqlite";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/search.json.mozlz4".source = "~/.mozilla/firefox/s0u782un.default/search.json.mozlz4";
 
   # Extensions
-  home.file."${profile}/extensions".source = "${template}/extensions";
-  home.file."${profile}/extension-settings.json".source = "${template}/extension-settings.json";
-  home.file."${profile}/extensions.json".source = "${template}/extensions.json";
-  home.file."${profile}/extension-preferences.json".source = "${template}/extension-preferences.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/extensions".source = "~/.mozilla/firefox/s0u782un.default/extensions";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/extension-settings.json".source = "~/.mozilla/firefox/s0u782un.default/extension-settings.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/extensions.json".source = "~/.mozilla/firefox/s0u782un.default/extensions.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/extension-preferences.json".source = "~/.mozilla/firefox/s0u782un.default/extension-preferences.json";
 
   # Bookmarks + history
-  home.file."${profile}/places.sqlite".source = "${template}/places.sqlite";
-  home.file."${profile}/favicons.sqlite".source = "${template}/favicons.sqlite";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/places.sqlite".source = "~/.mozilla/firefox/s0u782un.default/places.sqlite";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/favicons.sqlite".source = "~/.mozilla/firefox/s0u782un.default/favicons.sqlite";
 
   # Passwords
-  home.file."${profile}/logins.json".source = "${template}/logins.json";
-  home.file."${profile}/logins-backup.json".source = "${template}/logins-backup.json";
-  home.file."${profile}/key4.db".source = "${template}/key4.db";
-  home.file."${profile}/cert9.db".source = "${template}/cert9.db";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/logins.json".source = "~/.mozilla/firefox/s0u782un.default/logins.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/logins-backup.json".source = "~/.mozilla/firefox/s0u782un.default/logins-backup.json";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/key4.db".source = "~/.mozilla/firefox/s0u782un.default/key4.db";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/cert9.db".source = "~/.mozilla/firefox/s0u782un.default/cert9.db";
 
   # Cookies + site storage
-  home.file."${profile}/cookies.sqlite".source = "${template}/cookies.sqlite";
-  home.file."${profile}/webappstore.sqlite".source = "${template}/webappstore.sqlite";
-  home.file."${profile}/storage/ls-archive.sqlite".source = "${template}/ls-archive.sqlite";
-  home.file."${profile}/storage.sqlite".source = "${template}/storage.sqlite";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/cookies.sqlite".source = "~/.mozilla/firefox/s0u782un.default/cookies.sqlite";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/webappstore.sqlite".source = "~/.mozilla/firefox/s0u782un.default/webappstore.sqlite";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/storage/ls-archive.sqlite".source = "~/.mozilla/firefox/s0u782un.default/ls-archive.sqlite";
+  home.file."~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template/storage.sqlite".source = "~/.mozilla/firefox/s0u782un.default/storage.sqlite";
 }
 
