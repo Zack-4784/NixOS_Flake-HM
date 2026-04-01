@@ -12,7 +12,6 @@
     ./Program-Configurations/bash.nix
     ./Program-Configurations/kitty.nix
     ./Program-Configurations/spotify-player.nix
-    ./Program-Configurations/Firefox/firefox.nix
   ];
 
   home.file.".local/share/icons/firefox-custom.png".source =
