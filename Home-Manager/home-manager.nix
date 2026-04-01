@@ -10,5 +10,6 @@
     ./Program-Configurations/kitty.nix
     ./Program-Configurations/spotify-player.nix
     ./Program-Configurations/kate.nix
+    ./Program-Configurations/helix.nix
   ];
 }
