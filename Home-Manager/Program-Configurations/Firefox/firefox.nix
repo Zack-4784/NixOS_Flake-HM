@@ -1,7 +1,7 @@
 {
   # setting shortnames for paths frequently used - the templates path and the real firefox path
   let
-    template = "${config.home.homeDirectory}/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template";
+    template = "~/documents/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template";
     profile  = ".mozilla/firefox/s0u782un.default";
   in
   {
