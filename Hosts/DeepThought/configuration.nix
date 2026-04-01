@@ -6,7 +6,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    kate
+    kdePackages.kate
     firefox
     spotify-player
     libreoffice-qt
