@@ -1,76 +1,40 @@
-{ config, pkgs, ... }: {
-  programs.firefox = {
-    enable = true;
-    profiles.school = {
-      id = 0;
-      settings = {
-        "browser.startup.homepage" = "https://nixos.org";
-        "privacy.resistFingerprinting" = true;
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-        "browser.search.region" = "GB";
-        "browser.search.isUS" = false;
-        "browser.toolbars.bookmarks.visibility" = "always";
-      };
-      extensions = with pkgs.firefox-addons; [
-        ublock-origin
-        firefox-color
-      ];
-      search = {
-        default = "Google";
-        engines = {
-          "Google" = {
-            urls = [{
-              template = "https://www.google.com/search?q={searchTerms}";
-            }];
-            icon = "${pkgs.fetchurl {
-              url = "https://www.google.com/favicon.ico";
-              sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-            }}";
-          };
+{
+  # setting shortnames for paths frequently used - the templates path and the real firefox path
+  let
+    template = "${config.home.homeDirectory}/NixOS/Home-Manager/Program-Configuratoins/Firefox/Firefox-Files-Template";
+    profile  = ".mozilla/firefox/s0u782un.default";
+  in
+  {
 
-          "Nix Packages" = {
-            urls = [{
-              template = "https://search.nixos.org/packages?query={searchTerms}";
-            }];
-            definedAliases = [ "@np" ];
-          };
-        };
-      };
-      userContent = ''
-        body {
-          background: #111 !important;
-        }
-      '';
+    # Core config files
+    home.file."${profile}/prefs.js".source = "${template}/prefs.js";
+    home.file."${profile}/xulstore.json".source = "${template}/xulstore.json";
+    home.file."${profile}/handlers.json".source = "${template}/handlers.json";
+    home.file."${profile}/containers.json".source = "${template}/containers.json";
+    home.file."${profile}/permissions.sqlite".source = "${template}/permissions.sqlite";
+    home.file."${profile}/search.json.mozlz4".source = "${template}/search.json.mozlz4";
 
-      bookmarks = [
-        {name = "TB"; url = "https://outlook.office.com/mail/0/?deeplink=mail%2F";}
-        {name = "CA"; url = "https://outlook.office.com/mail/0/?deeplink=mail%2F";}
-        {name = "MC"; url = "https://copilot.microsoft.com/";}
-        {name = "NM"; url = "https://nixos.org/manual/nixpkgs/stable/#id-1.4";}
-        {name = "MT"; url = "https://teams.cloud.microsoft/";}
-        {name = "MB"; url = "https://www.mybib.com/#/projects/MDJWpz/citations";}
-        {name = "GD"; url = "https://drive.google.com/drive/u/1/my-drive?hl=en_GB";}
-        {name = "LL"; url = "https://labex.io/linuxjourney";}
-        {name = "KB"; url = "https://www.kerboodle.com/users/login";}
-        {name = "YT"; url = "https://www.youtube.com/";}
-        {name = "WW"; url = "https://word.cloud.microsoft/?wdOrigin=WORDONLINE.SHELL";}
-        {name = "HM"; url = "https://github.com/Evertras/simple-homemanager/blob/main/03-explain-inputs.md";}
-        {name = "RN"; url = "https://nixos.org/manual/nixos/stable/release-notes";}
-        {name = "MN"; url = "https://mynixos.com/home-manager/options";}
-        {name = "EX"; url = "https://github.com/jonringer/nixpkgs-config/blob/master/home.nix";}
-        {name = "KT"; url = "https://sw.kovidgoyal.net/kitty/conf/#sample-kitty-conf";}
-        {name = "CS"; url = "https://adacomputerscience.org/exam_specifications_england#a_level/ocr";}
-        {name = "LM"; url = "https://peterhigginson.co.uk/lmc/";}
-        {name = "HT"; url = "https://adacomputerscience.org/concepts/webtech_html";}
-        {name = "OW"; url = "https://overthewire.org/wargames/bandit/bandit0.html";}
-        {name = "OW"; url = "https://overthewire.org/wargames/bandit/bandit7.html";}
-        {name = "WH"; url = "https://wheelofnames.com/";}
-        {name = "RP"; url = "https://www.raspberrypi.com/products/raspberry-pi-zero/";}
-        {name = "SP"; url = "https://open.spotify.com/";}
-        {name = "CL"; url = "https://imagecolorpicker.com/";}
-        {name = "FT"; url = "https://color.firefox.com/?utm_source=firefox-browser&utm_medium=firefox-browser&utm_content=theme-footer-link";}
-      ];
+    # Extensions
+    home.file."${profile}/extensions".source = "${template}/extensions";
+    home.file."${profile}/extension-settings.json".source = "${template}/extension-settings.json";
+    home.file."${profile}/extensions.json".source = "${template}/extensions.json";
+    home.file."${profile}/extension-preferences.json".source = "${template}/extension-preferences.json";
 
-    };
-  };
+    # Bookmarks + history
+    home.file."${profile}/places.sqlite".source = "${template}/places.sqlite";
+    home.file."${profile}/favicons.sqlite".source = "${template}/favicons.sqlite";
+
+    # Passwords
+    home.file."${profile}/logins.json".source = "${template}/logins.json";
+    home.file."${profile}/logins-backup.json".source = "${template}/logins-backup.json";
+    home.file."${profile}/key4.db".source = "${template}/key4.db";
+    home.file."${profile}/cert9.db".source = "${template}/cert9.db";
+
+    # Cookies + site storage
+    home.file."${profile}/cookies.sqlite".source = "${template}/cookies.sqlite";
+    home.file."${profile}/webappstore.sqlite".source = "${template}/webappstore.sqlite";
+    home.file."${profile}/storage/ls-archive.sqlite".source = "${template}/ls-archive.sqlite";
+    home.file."${profile}/storage.sqlite".source = "${template}/storage.sqlite";
+  }
 }
+
