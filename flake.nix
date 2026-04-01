@@ -11,7 +11,7 @@
   outputs = {nixpkgs, ...} @ inputs:
     let
       system = "x86_64-linux";
-      lgpkgs = nixpkgs.legacyPackages.${system};
+      pkgs = nixpkgs.legacyPackages.${system};
       python = pkgs.python312;
     in {
       nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
@@ -21,5 +21,4 @@
         ];
       };
     };
-  };
 }
