@@ -16,10 +16,12 @@ in
   home.file."${profile}/search.json.mozlz4".source = "${template}/search.json.mozlz4";
 
   # -------------------------
-  # Extensions
+  # Extensions (directory)
   # -------------------------
-  home.file."${profile}/extensions".source = "${template}/extensions";
-  home.file."${profile}/extensions".recursive = true;
+  home.file."${profile}/extensions" = {
+    source = "${template}/extensions";
+    recursive = true;
+  };
 
   home.file."${profile}/extension-settings.json".source = "${template}/extension-settings.json";
   home.file."${profile}/extensions.json".source = "${template}/extensions.json";
@@ -45,7 +47,7 @@ in
   home.file."${profile}/cookies.sqlite".source = "${template}/cookies.sqlite";
   home.file."${profile}/webappstore.sqlite".source = "${template}/webappstore.sqlite";
 
-  # Only safe persistent storage files
+  # Safe persistent storage files
   home.file."${profile}/ls-archive.sqlite".source = "${template}/ls-archive.sqlite";
   home.file."${profile}/storage.sqlite".source = "${template}/storage.sqlite";
 }
