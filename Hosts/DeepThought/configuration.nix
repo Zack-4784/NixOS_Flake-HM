@@ -29,6 +29,7 @@
     age
     bat
     helix
+    qemu
   ];
 
   system.stateVersion = "25.11";
