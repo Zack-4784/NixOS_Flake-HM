@@ -32,6 +32,10 @@
     qemu
   ];
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  users.users.zack.extraGroups = [ "libvirtd" "kvm" ];
+
   system.stateVersion = "25.11";
 
   users.users.zack = {
