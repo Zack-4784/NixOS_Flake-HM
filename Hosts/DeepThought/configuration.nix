@@ -32,17 +32,16 @@
     qemu
   ];
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   system.stateVersion = "25.11";
 
   users.users.zack = {
     isNormalUser = true;
     description = "Zack";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" ];
   };
-
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-  users.users.zack.extraGroups = [ "libvirtd" "kvm" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
