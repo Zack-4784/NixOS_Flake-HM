@@ -5,6 +5,7 @@
       device = {
         volume = 100;
       };
+    };
     keymaps = [
       {command = "NextTrack"; key_sequence = ">";}
       {command = "PreviousTrack"; key_sequence = "<";}
