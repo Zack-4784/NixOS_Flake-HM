@@ -104,8 +104,8 @@
     SetEditor=false
 
     [MainWindow]
-    1920x1080 screen: Height=1052
-    1920x1080 screen: Width=766
+    1920x1080 screen: Height=946
+    1920x1080 screen: Width=912
 
     [filetree]
     editShade=183,220,246
