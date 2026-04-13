@@ -1,7 +1,10 @@
 {pkgs, lib, inputs, ...}: {
   programs.spotify-player = {
     enable = true;
-
+    settings = {
+      device = {
+        volume = 100;
+      };
     keymaps = [
       {command = "NextTrack"; key_sequence = ">";}
       {command = "PreviousTrack"; key_sequence = "<";}
