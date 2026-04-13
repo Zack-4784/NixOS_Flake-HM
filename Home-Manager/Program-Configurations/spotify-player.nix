@@ -2,10 +2,17 @@
   programs.spotify-player = {
     enable = true;
     settings = {
-      device = {
-        volume = 100;
-      };
+      theme = "mytheme";
+      device.volume = 100;
     };
+    themes = [
+      {
+        name = "mytheme";
+        component_style = {
+          playback_metadata = { fg = "White"; };
+        };
+      }
+    ];
     keymaps = [
       {command = "NextTrack"; key_sequence = ">";}
       {command = "PreviousTrack"; key_sequence = "<";}
