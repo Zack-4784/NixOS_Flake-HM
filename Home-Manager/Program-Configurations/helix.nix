@@ -1,4 +1,4 @@
-{pkgs, lib, inputs, ...}: {
+{pkgs, lib, ...}: {
     programs.helix = {
         enable = true;
         themes = {

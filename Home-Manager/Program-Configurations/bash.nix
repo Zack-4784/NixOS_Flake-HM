@@ -1,4 +1,4 @@
-{pkgs, lib, inputs, ...}: {
+{pkgs, lib, ...}: {
   programs.bash = {
     enable = true;
 
