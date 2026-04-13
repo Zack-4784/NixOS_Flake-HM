@@ -18,7 +18,7 @@
       {command = "PreviousTrack"; key_sequence = "<";}
       {command = "ResumePause"; key_sequence = "space";}
       {command = "PlayRandom"; key_sequence = "~";}
-      {command = "Repeat"; key_sequence = "C-r";}
+      {command = "Repeat"; key_sequence = "o";}
       {command = "Shuffle"; key_sequence = "C-s";}
       {command = "SeekStart"; key_sequence = "^";}
       {command = "Quit"; key_sequence = "C-c";}
@@ -54,7 +54,7 @@
       {command = "Queue"; key_sequence = "=";}
       {command = "OpenCommandHelp"; key_sequence = "!";}
       {command = "PreviousPage"; key_sequence = "backspace";}
-      {command = "OpenSpotifyLinkFromClipboard"; key_sequence = "o";}
+      {command = "OpenSpotifyLinkFromClipboard"; key_sequence = ":";}
       {command = "SortTrackByTitle"; key_sequence = "s t";}
       {command = "SortTrackByArtists"; key_sequence = "s a";}
       {command = "SortTrackByAlbum"; key_sequence = "s A";}
