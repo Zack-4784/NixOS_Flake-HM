@@ -24,7 +24,7 @@
         && cd ~/
       '';
       reb = "sudo nixos-rebuild switch --flake ~/documents/NixOS#DeepThought";
-      cu  = "nix-collect-garbage -d";
+      cu  = "sudo nix-collect-garbage -d";
       cs  = "cat ~/documents/cheatsheet";
       bc  = "cat ~/.bashrc";
       gin = "cd ~/documents/NixOS";

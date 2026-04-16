@@ -44,11 +44,6 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" ];
   };
 
-  nix.gc.options = "--delete-generations +25";
-  # --delete-older-than 7d
-  nix.optimise.automatic = true;
-  nix.optimise.dates = [ "weekly" ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
