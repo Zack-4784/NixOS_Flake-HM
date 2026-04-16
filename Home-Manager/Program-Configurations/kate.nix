@@ -1,5 +1,7 @@
 {pkgs, lib, ...}: {
-  xdg.configFile."katerc".text = ''
+  xdg.configFile."katerc" = {
+  force = true;
+  text = ''
     [General]
     Allow Tab Scrolling=true
     Auto Hide Tabs=false
@@ -143,4 +145,5 @@
     SymbolTree=true
     TypeFormatting=false
   '';
+  };
 }
