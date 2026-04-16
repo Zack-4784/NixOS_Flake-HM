@@ -13,7 +13,7 @@
             d = allDesktops[i];
             d.wallpaperPlugin = 'org.kde.image';
             d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];
-            d.writeConfig('Image', 'file:///home/zack/Pictures/wallpapers/swirls.jpeg');
+            d.writeConfig('Image', 'file:///home/zack/Pictures/wallpapers/swirls.jpg');
           }"
         ''}";
       };

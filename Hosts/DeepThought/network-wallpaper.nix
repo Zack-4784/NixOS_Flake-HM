@@ -28,7 +28,7 @@
           if [ "$SSID" = "Woodlands" ]; then
             set_wallpaper "/home/zack/Pictures/wallpapers/xenia.png"
           else
-            set_wallpaper "/home/zack/Pictures/wallpapers/swirls.jpeg"
+            set_wallpaper "/home/zack/Pictures/wallpapers/swirls.jpg"
           fi
         fi
       '';
