@@ -2,7 +2,7 @@
 {pkgs, lib, inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ./network-wallpaper.nix
+    #./network-wallpaper.nix
     inputs.home-manager.nixosModules.default
   ];
 

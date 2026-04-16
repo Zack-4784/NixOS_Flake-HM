@@ -18,7 +18,7 @@
       python = pkgs.python312;
     in {
       nixosConfigurations.DeepThought = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs; inherit python;};
+        specialArgs = {inherit inputs python;};
         modules = [
           ./Hosts/DeepThought/configuration.nix
 
@@ -30,7 +30,7 @@
             home-manager.users.zack = {
               imports = [
                 ./Home-Manager/home-manager.nix
-                inputs.plasma-manager.homeManagerModules.plasma-manager
+                #inputs.plasma-manager.homeManagerModules.plasma-manager
               ];
             };
           }
