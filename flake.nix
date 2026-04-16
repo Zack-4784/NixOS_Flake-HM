@@ -30,7 +30,7 @@
             home-manager.users.zack = {
               imports = [
                 ./Home-Manager/home-manager.nix
-                inputs.plasma-manager.homeManagerModules.plasma-manager
+                #inputs.plasma-manager.homeManagerModules.plasma-manager
               ];
             };
           }
