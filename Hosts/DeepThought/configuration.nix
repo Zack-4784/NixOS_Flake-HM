@@ -39,7 +39,8 @@
 
   services.displayManager.sddm.settings = {
     Theme = {
-    Background = "${./login-screen/balcanies.jpg}";
+      Background = "${./login-screen/balcanies.jpg}";
+      Current = "";
     };
   };
 
