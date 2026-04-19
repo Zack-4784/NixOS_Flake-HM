@@ -41,7 +41,6 @@
         Background = "${./login-screen/balcanies.jpg}";
       };
     };
-    package = pkgs.kdePackages.sddm;
     extraPackages = [ pkgs.where-is-my-sddm-theme ];
   };
 
