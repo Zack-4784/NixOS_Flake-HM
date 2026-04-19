@@ -72,12 +72,6 @@
   };
 
   services.xserver.enable = true;
-
-  environment.etc."sddm-wallpaper.jpg" = {
-    source = ./login-screen/balcanies.jpg;
-    mode = "0444";
-  };
-
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
