@@ -30,18 +30,19 @@
     bat
     helix
     qemu
-    protonvpn-gui
+    proton-vpn
     librewolf
   ];
 
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
-  services.displayManager.sddm.settings = {
-    Theme = {
-      Background = "${./login-screen/balcanies.jpg}";
-      Current = "";
+  services.displayManager.sddm = {
+    settings = {
+      Theme = {
+        Current = "where_is_my_sddm_theme";
+        Background = "${./login-screen/balcanies.jpg}";
+      };
     };
+    package = pkgs.kdePackages.sddm;
+    extraPackages = [ pkgs.where-is-my-sddm-theme ];
   };
 
   system.stateVersion = "25.11";
