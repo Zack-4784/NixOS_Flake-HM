@@ -1,18 +1,22 @@
 {pkgs, ...}: let
   cycleWallpaper = pkgs.writeShellScriptBin "cycle-wallpaper" ''
-    WALLPAPER_DIR="/home/zack/Pictures/wallpapers"
+    XENIA="/home/zack/Pictures/wallpapers/xenia.png"
+    SWIRLS="/home/zack/Pictures/wallpapers/swirls.jpg"
     STATE_FILE="/tmp/current-wallpaper"
-    WALLPAPERS=("$WALLPAPER_DIR/xenia.png" "$WALLPAPER_DIR/swirls.jpg")
 
     if [ ! -f "$STATE_FILE" ]; then
-      echo "0" > "$STATE_FILE"
+      echo "xenia" > "$STATE_FILE"
     fi
 
     CURRENT=$(cat "$STATE_FILE")
-    NEXT=$(( (CURRENT + 1) % ${#WALLPAPERS[@]} ))
-    echo "$NEXT" > "$STATE_FILE"
 
-    plasma-apply-wallpaperimage "''${WALLPAPERS[''${NEXT}]}"
+    if [ "$CURRENT" = "xenia" ]; then
+      plasma-apply-wallpaperimage "$SWIRLS"
+      echo "swirls" > "$STATE_FILE"
+    else
+      plasma-apply-wallpaperimage "$XENIA"
+      echo "xenia" > "$STATE_FILE"
+    fi
   '';
 in {
   home.packages = [ cycleWallpaper ];
