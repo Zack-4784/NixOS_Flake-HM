@@ -37,6 +37,12 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  services.displayManager.sddm.settings = {
+    Theme = {
+      Background = "/home/zack/Pictures/wallpapers/balcanies.jpg";
+    };
+  };
+
   system.stateVersion = "25.11";
 
   users.users.zack = {
