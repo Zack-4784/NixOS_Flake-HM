@@ -36,18 +36,7 @@
 
   virtualisation.libvirtd = {
     enable = true;
-    qemu = {
-      package = pkgs.qemu_kvm;
-      runAsRoot = true;
-      swtpm.enable = true;
-      ovmf = {
-        enable = true;
-        package = pkgs.OVMFFull.override {
-          secureBoot = true;
-          tpmSupport = true;
-        };
-      };
-    };
+    qemu.swtpm.enable = true;
   };
   programs.virt-manager.enable = true;
 
