@@ -32,6 +32,7 @@
     qemu
     proton-vpn
     librewolf
+    kdePackages.sddm-kcm
   ];
 
   virtualisation.libvirtd = {
