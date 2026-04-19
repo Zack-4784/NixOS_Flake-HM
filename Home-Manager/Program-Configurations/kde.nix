@@ -12,7 +12,7 @@
     NEXT=$(( (CURRENT + 1) % ${#WALLPAPERS[@]} ))
     echo "$NEXT" > "$STATE_FILE"
 
-    plasma-apply-wallpaperimage "''${WALLPAPERS[$NEXT]}"
+    plasma-apply-wallpaperimage "''${WALLPAPERS[''${NEXT}]}"
   '';
 in {
   home.packages = [ cycleWallpaper ];
