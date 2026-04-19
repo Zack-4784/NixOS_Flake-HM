@@ -83,8 +83,8 @@
     settings = {
       Theme = {
         Background = "/etc/sddm-wallpaper.jpg";
-        Current = "";
-      };
+        Current = lib.mkForce "";
+        };
     };
   };
 
