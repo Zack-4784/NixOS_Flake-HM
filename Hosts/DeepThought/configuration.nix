@@ -78,16 +78,7 @@
     mode = "0444";
   };
 
-  services.displayManager.sddm = {
-    enable = true;
-    settings = {
-      Theme = {
-        Background = "/etc/sddm-wallpaper.jpg";
-        Current = lib.mkForce "";
-        };
-    };
-  };
-
+  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   services.xserver.xkb = {
