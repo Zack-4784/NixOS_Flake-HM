@@ -34,15 +34,8 @@
     librewolf
   ];
 
-  services.displayManager.sddm = {
-    settings = {
-      Theme = {
-        Current = "where_is_my_sddm_theme";
-        Background = "${./login-screen/balcanies.jpg}";
-      };
-    };
-    extraPackages = [ pkgs.where-is-my-sddm-theme ];
-  };
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   system.stateVersion = "25.11";
 
