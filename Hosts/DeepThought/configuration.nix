@@ -2,7 +2,6 @@
 {pkgs, lib, inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    #./network-wallpaper.nix
     inputs.home-manager.nixosModules.default
   ];
 
@@ -31,6 +30,8 @@
     bat
     helix
     qemu
+    protonvpn-gui
+    librewolf
   ];
 
   virtualisation.libvirtd.enable = true;
