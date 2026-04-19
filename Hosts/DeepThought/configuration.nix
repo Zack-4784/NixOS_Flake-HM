@@ -37,9 +37,10 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  environment.etc."sddm-wallpaper.jpg".source = /home/zack/Pictures/wallpapers/balcanies.jpg;
   services.displayManager.sddm.settings = {
     Theme = {
-      Background = "/home/zack/Pictures/wallpapers/balcanies.jpg";
+    Background = "/etc/sddm-wallpaper.jpg";
     };
   };
 
