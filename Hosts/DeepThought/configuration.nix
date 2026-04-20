@@ -33,6 +33,7 @@
     proton-vpn
     librewolf
     kdePackages.sddm-kcm
+    protonmail-desktop
   ];
 
   virtualisation.libvirtd = {
