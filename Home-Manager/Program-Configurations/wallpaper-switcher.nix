@@ -2,7 +2,7 @@
   cycleWallpaper = pkgs.writeShellScriptBin "cycle-wallpaper" ''
     XENIA="/home/zack/Pictures/wallpapers/xenia.png"
     SWIRLS="/home/zack/Pictures/wallpapers/swirls.jpg"
-    STATE_FILE="/tmp/current-wallpaper"
+    STATE_FILE=".$HOME/.local/state/current-wallpaper"
 
     if [ ! -f "$STATE_FILE" ]; then
       echo "xenia" > "$STATE_FILE"

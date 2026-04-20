@@ -11,6 +11,6 @@
     ./Program-Configurations/spotify-player.nix
     ./Program-Configurations/kate.nix
     ./Program-Configurations/helix.nix
-    ./Program-Configurations/kde.nix
+    ./Program-Configurations/wallpaper-switcher.nix
   ];
 }
