@@ -12,6 +12,5 @@
     ./Program-Configurations/kate.nix
     ./Program-Configurations/helix.nix
     ./Program-Configurations/wallpaper-switcher.nix
-    ./Program-Configurations/librewolf.nix
   ];
 }
