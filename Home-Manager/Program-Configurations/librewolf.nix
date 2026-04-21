@@ -31,7 +31,7 @@ in
   programs.librewolf = {
     enable = true;
 
-    pprofiles.default = {
+    profiles.default = {
       isDefault = true;
 
       extensions = {
