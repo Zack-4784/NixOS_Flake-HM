@@ -30,7 +30,7 @@
       gin = "cd ~/documents/NixOS";
       mu  = "spotify_player";
       gp  = "git push -u origin main";
-      upgrade = "gin && nix flake update && reb";
+      upgrade = "gin && nix flake update && agr";
     };
   };
 }
