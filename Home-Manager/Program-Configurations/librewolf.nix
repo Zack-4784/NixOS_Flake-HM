@@ -28,12 +28,16 @@ let
   };
 in
 {
-  profiles.default = {
-    isDefault = true;
+  programs.librewolf = {
+    enable = true;
 
-    extensions = {
-      force = true;
-      packages = builtins.attrValues addons;
+    pprofiles.default = {
+      isDefault = true;
+
+      extensions = {
+        force = true;
+        packages = builtins.attrValues addons;
+      };
     };
   };
 }
