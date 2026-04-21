@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+  { pkgs, lib, ... }:
 
 let
   addons = {
@@ -28,13 +28,12 @@ let
   };
 in
 {
-  programs.librewolf = {
-    enable = true;
+  profiles.default = {
+    isDefault = true;
 
-    profiles.default = {
-      isDefault = true;
-
-      extensions.packages = builtins.attrValues addons;
+    extensions = {
+      force = true;
+      packages = builtins.attrValues addons;
     };
   };
 }
