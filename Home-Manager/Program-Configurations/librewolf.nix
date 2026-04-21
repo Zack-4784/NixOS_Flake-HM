@@ -1,4 +1,4 @@
-  { pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 let
   addons = {
@@ -28,8 +28,9 @@ let
   };
 in
 {
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
+    package = pkgs.librewolf;
 
     profiles.default = {
       isDefault = true;
