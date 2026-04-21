@@ -32,7 +32,7 @@ in
     enable = true;
     package = pkgs.librewolf;
 
-    profiles.default = {
+    profiles.librewolp = {
       isDefault = true;
 
       extensions = {
