@@ -33,6 +33,7 @@
     proton-vpn
     librewolf
     kdePackages.sddm-kcm
+    onlyoffice-desktopeditors
   ];
 
   virtualisation.libvirtd = {
