@@ -42,6 +42,7 @@
   programs.virt-manager.enable = true;
 
   system.stateVersion = "25.11";
+  home-manager.backupFileExtension = "backup";
 
   users.users.zack = {
     isNormalUser = true;
