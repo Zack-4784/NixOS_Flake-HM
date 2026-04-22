@@ -5,7 +5,7 @@
     initExtra = ''
       export EDITOR="nano"
       export PATH="$HOME/bin:$PATH"
-      PS1='\[\e[1;32m\][\h] \[\e[0m\]'
+      PS1='$(if [ $EUID -eq 0 ]; then echo "\[\e[1;31m\]"; else echo "\[\e[1;32m\]"; fi)[\h] \[\e[0m\]'
     '';
 
     shellAliases = {
