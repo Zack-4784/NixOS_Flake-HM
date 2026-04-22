@@ -32,6 +32,7 @@
       mu  = "spotify_player";
       gp  = "git push -u origin main";
       upgrade = "gin && nix flake update && agr";
+      su = "sudo bash --rcfile ~/.bashrc";
     };
   };
 }
