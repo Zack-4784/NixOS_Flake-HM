@@ -5,7 +5,7 @@
     initExtra = ''
       export EDITOR="nano"
       export PATH="$HOME/bin:$PATH"
-      PS1='[\h] '
+      PS1='[\h]\$ '
     '';
 
     shellAliases = {
