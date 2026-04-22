@@ -33,7 +33,6 @@
     proton-vpn
     librewolf
     kdePackages.sddm-kcm
-    onlyoffice-desktopeditors
   ];
 
   virtualisation.libvirtd = {
@@ -52,6 +51,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 0;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
