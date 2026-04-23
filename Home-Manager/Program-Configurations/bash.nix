@@ -5,7 +5,7 @@
     initExtra = ''
       export EDITOR="nano"
       export PATH="$HOME/bin:$PATH"
-      PS1='$(if [ $EUID -eq 0 ]; then echo "\[\e[1;31m\]{\w}\n[root]"; else echo "\[\e[1;32m\]{\w}\n[\h]"; fi) \[\e[0m\]'
+      PS1='$(if [ $EUID -eq 0 ]; then echo "\[\e[1;31m\]{\w}\n[root]"; else echo "\[\e[38;2;120;180;255m\]{\w}\n\[\e[1;32m\][\h]"; fi) \[\e[0m\]'
     '';
 
     shellAliases = {
