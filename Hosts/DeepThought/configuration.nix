@@ -33,6 +33,8 @@
     proton-vpn
     librewolf
     kdePackages.sddm-kcm
+    samba
+    cifs-utils
   ];
 
   virtualisation.libvirtd = {
